@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  </head>
+  <body>
+    <section class="App-container" id="App-container">
+      <header class="Header">
+        <nav class="Header-menu nav-wrapper">
+          <div class="Header-left"><a class="Header-title brand-logo left" href="/">Classiccars</a></div>
+          <div class="Header-right">
+            <ul class="Menu-list">
+              <li class="Menu-tiem right"><a href="/">Home</a><a href="/about">About us</a><a href="/talk">Talk to us</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <section class="Main">
+        <div class="container">
+          <div class="Main-container center-align" id="Main-container"></div>
+          <footer class="Footer"><span class="Footer-text">CLASSICCARS.NYC  © All rights reserved.</span></footer>
+        </div>
+        <div class="Main-layer"></div>
+        <div class="Main-layerBody"></div>
+      </section>
+    </section>
+    <script type="text/javascript">
+      var map;
+      function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 40.758284, lng: -73.9679739},
+      zoom: 15
+      });
+      var marker = new google.maps.Marker({
+      map: map,
+      position: {lat: 40.758284, lng: -73.9679739},
+      title: 'Hello World!'
+      });
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script type="application/javascript" src="app.js"></script>
+  </body>
+</html>
