@@ -26,6 +26,12 @@ body
 
   &-container
     min-height 100vh
+    transition all 300ms ease-out
+
+    &.transition
+      transform: translateX(100px);
+      opacity: 0;
+
 
   .container
     position relative
@@ -63,3 +69,6 @@ html, body
   padding 0
 #map
   height 400px
+
+#sidenav-overlay
+  z-index 2 !important

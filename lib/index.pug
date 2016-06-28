@@ -1,20 +1,30 @@
 doctype html
 html
   head
-    link(rel='stylesheet', href='app.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons')
     link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css')
+    link(rel='stylesheet', href='app.css')
   body
     section.App-container#App-container
       header.Header
         nav.Header-menu.nav-wrapper
-          div.Header-left
-            a(href="/").Header-title.brand-logo.left Classiccars
-          div.Header-right
-            ul.Menu-list
-              li.Menu-tiem.right
-                a(href="/") Home
-                a(href="/about") About us
-                a(href="/talk") Talk to us
+          a(href="/classiccars.nyc/").Header-title.brand-logo Classiccars
+          a.button-collapse(data-activates='mobile-demo')
+            i.material-icons menu
+          ul.right.hide-on-med-and-down
+            li
+              a(href='/classiccars.nyc/') Home
+            li
+              a(href='/classiccars.nyc/about') About us
+            li
+              a(href='/classiccars.nyc/talk') Talk to us
+          ul#mobile-demo.side-nav
+            li
+              a(href='/classiccars.nyc/') Home
+            li
+              a(href='/classiccars.nyc/about') About us
+            li
+              a(href='/classiccars.nyc/talk') Talk to us
       section.Main
         div.container
           div.Main-container#Main-container.center-align
@@ -37,4 +47,6 @@ html
       }
     script(src='https://code.jquery.com/jquery-3.0.0.min.js'   integrity='sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0='   crossorigin='anonymous')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js')
+    script(type="text/javascript").
+      $('.button-collapse').sideNav()
     script(type='application/javascript', src='app.js')
